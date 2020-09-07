@@ -34,7 +34,7 @@ mongoose
     `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@mflix.gbuuo.mongodb.net/hoc?retryWrites=true&w=majority`
   )
   .then(() => {
-    app.listen(5000);
+    app.listen(process.env.PORT || 5000);
   })
   .catch((err) => {
     console.log("Error ocurred");
